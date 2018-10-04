@@ -10,7 +10,7 @@ pwd = 'pwd'
 driver = '{ODBC Driver 13 for SQL Server}'
 
 # create connection to db
-sqlconn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' + server + ';PORT=' + port + ';DATABASE=' + database + ';UID='
+sqlconn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' + server + ';PORT=' + port + ';DATABASE=' + db + ';UID='
                          + username + ';PWD=' + pwd)
 
 # TODO Fill all parameters. Deadline - 6.10.2018
