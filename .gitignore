@@ -1,7 +1,12 @@
-# files to ignore #
-###################
+#     files to ignore     #
+###########################
 
-# IDE files #
-#############
+# Python precompile files #
+###########################
 
-.idea/**/*.*
+*.pyc
+
+#        IDE files        #
+###########################
+
+.idea/

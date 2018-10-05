@@ -1,25 +1,24 @@
 import pyodbc
 
 # connection parameters
-
-server = 'servername'
+server = 'kpi-7-security.database.windows.net'
 port = '1433'
-db = 'dbname'
-username = 'user'
-pwd = 'pwd'
+db = 'Security'
+username = 'dladmin'
+pwd = 'Velkomm1'
 driver = '{ODBC Driver 13 for SQL Server}'
 
 # create connection to db
 sqlconn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' + server + ';PORT=' + port + ';DATABASE=' + db + ';UID='
                          + username + ';PWD=' + pwd)
 
-# TODO Fill all parameters. Deadline - 6.10.2018
+# TODO Fill all parameters. Deadline - 6.10.2018 - DONE
 
 # init cursor
 cursor = sqlconn.cursor()
 
 # test connection
-cursor.execute("sql query")
+cursor.execute("Query")
 row = cursor.fetchone()
 
 # output table
