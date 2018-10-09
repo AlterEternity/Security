@@ -6,7 +6,7 @@ import models as dbHandler
 app = Flask(__name__)
 
 
-# login logic
+# login logic - TODO discover rest, check redirect after login, verify correctness of login
 @app.route('/', methods=['POST','GET'])
 def login():
     if request.method == 'POST':

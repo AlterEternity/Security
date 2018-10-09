@@ -14,22 +14,9 @@
     			<input type="submit" class="button" value="Log In"/>
   			</form>
 		</div>
-
+<!-- TODO discover inserting if -->
     <div class="footer">
       <h4>Made by <a href="http://www.github.com/AlterEternity">Denys Lukashevych</a></h4>
     </div>
-
-    {%if users%}
-    <div class="users" style="margin-left:20%">
-      <h2>Registered Users List</h2>
-      <table style="width:100%;">
-        {%for user in users%}
-          <tr>
-            <td>{{user[0]}}</td>
-          </tr>
-        {%endfor%}
-      </table>
-    </div>
-    {%endif%}
 </body>
 </html>
