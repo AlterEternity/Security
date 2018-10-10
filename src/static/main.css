@@ -17,15 +17,15 @@ h1 {
   margin-bottom: 10px;
 }
 
-.box h2{
+.box h2, h3{
   text-align: center;
   margin-top: 30px;
 }
 
 .box {
   margin: 20px auto;
-  width: 310px;
-  height: 260px;
+  width: 400px;
+  height: 300px;
   -webkit-border-radius: 8px/7px;
   -moz-border-radius: 8px/7px;
   border-radius: 8px/7px;

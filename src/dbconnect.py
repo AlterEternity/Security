@@ -17,4 +17,3 @@ def connect():
 
     # returning connection variable
     return sqlconn
-

@@ -1,9 +1,16 @@
 # TODO Create models. Adding/deleting users. Deadline - 6.10.2018. Done
-import dbconnect as sql
+from src import dbconnect as sql
+# from collections import namedtuple - TBD
+
+weak_passwords = ['12345678',
+                  'qwertyui',
+                  'qwerty123']
 
 
-# for future - make signup implementation
-def addUser(username, password):
+def add_user(username: str, password: str) -> None:
+    """
+    For future - make signup implementation
+    """
     conn = sql.connect()
     cur = conn.cursor()
     cur.execute("INSERT INTO Users (UserName,Pass) VALUES (?, ?)", (username, password))
@@ -11,17 +18,24 @@ def addUser(username, password):
     conn.close()
 
 
-# prototype for user verification
-def searchUser(username, password):
+def search_user(username: str, password: str) -> tuple or None:
+    """
+    Prototype for user verification
+    """
+    # FIXME Remove when web is ok
+    return username, password
     conn = sql.connect()
     cur = conn.cursor()
     cur.execute("SELECT UserName, Pass WHERE UserName = '(?)' AND Pass = '(?)'", (username, password))
     user = cur.fetchone()
+    conn.close()
     return user
 
 
-# getting list of registered users
-def getUsers():
+def get_users() -> list:
+    """
+    Getting list of registered users
+    """
     conn = sql.connect()
     cur = conn.cursor()
     cur.execute("SELECT UserName, Pass FROM Users")
