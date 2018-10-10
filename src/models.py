@@ -1,4 +1,3 @@
-# TODO Create models. Adding/deleting users. Deadline - 6.10.2018. Done
 from src import dbconnect as sql
 # from collections import namedtuple - TBD
 
@@ -30,6 +29,21 @@ def search_user(username: str, password: str) -> tuple or None:
     user = cur.fetchone()
     conn.close()
     return user
+
+
+def check_code(username: str, code: str) -> bool:
+    """
+    checking if code got from form is as code in DB
+    """
+    conn = sql.connect()
+    cur = conn.cursor()
+    cur.execute("SELECT Code FROM Users WHERE UserName = '(?)' ", username)
+    dbcode = cur.fetchone()
+    conn.close()
+    if code == dbcode:
+        return code == dbcode
+    else:
+        return code == dbcode
 
 
 def get_users() -> list:

@@ -12,10 +12,11 @@
                        value="{{ username }}" readonly="readonly"/>
                 <br>
     			<input type="text" name="captcha-code" id="captcha-code" placeholder="Captcha code" required/>
+    			<br>
+                <input type="submit" class="button" value="Log In"/>
                 {% if error %}
                 <h3 style="color: red">{{ error }}</h3>
                 {% endif %}
-    			<input type="submit" class="button" value="Log In"/>
   			</form>
 		</div>
         {% else %}
@@ -25,14 +26,14 @@
     			<input type="text" name="username" id="username" placeholder="Username" required/>
     			<br>
     			<input type="password" name="password" id="password" placeholder="Password" required/>
+                <br>
+                <input type="submit" class="button" value="Log In"/>
                 {% if error %}
                 <h3 style="color: red">{{ error }}</h3>
                 {% endif %}
-                <input type="submit" class="button" value="Log In"/>
   			</form>
 		</div>
         {% endif %}
-<!-- TODO discover inserting if - DONE -->
     <div class="footer">
       <h4>Made by <a href="http://www.github.com/AlterEternity">Denys Lukashevych</a></h4>
     </div>
