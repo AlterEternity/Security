@@ -46,6 +46,7 @@ def login_not_submitted():
 def index():
     """
         route for redirecting
+        TODO create page for redirecting
     """
     return render_template('./welcome.html')
 
