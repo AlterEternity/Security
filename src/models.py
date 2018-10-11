@@ -1,11 +1,8 @@
 from src import dbconnect as sql
 # from collections import namedtuple - TBD
 
-weak_passwords = ['12345678',
-                  'qwertyui',
-                  'qwerty123']
 
-
+# TODO do we need to use variable username?
 def add_user(username: str, password: str) -> None:
     """
     For future - make signup implementation
@@ -17,6 +14,7 @@ def add_user(username: str, password: str) -> None:
     conn.close()
 
 
+# TODO do we need to use variable username?
 def search_user(username: str, password: str) -> tuple or None:
     """
     Prototype for user verification
@@ -31,6 +29,7 @@ def search_user(username: str, password: str) -> tuple or None:
     return user
 
 
+# TODO do we need to use variable username?
 def check_code(username: str, code: str) -> bool:
     """
     checking if code got from form is as code in DB
