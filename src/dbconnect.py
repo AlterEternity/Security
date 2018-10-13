@@ -7,13 +7,13 @@ def connect():
     server = 'kpi-7-security.database.windows.net'
     port = '1433'
     db = 'Security'
-    username = 'dladmin'
+    uname = 'dladmin'
     pwd = 'Velkomm1'
     driver = '{ODBC Driver 13 for SQL Server}'
 
     # create connection to db
     sqlconn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' + server + ';PORT=' + port + ';DATABASE=' + db + ';UID='
-                             + username + ';PWD=' + pwd)
+                             + uname + ';PWD=' + pwd)
 
     # returning connection variable
     return sqlconn
