@@ -10,5 +10,11 @@
     <div class="box">
         <h2>User {{ username }} is logged in.</h2>
     </div>
+    <br>
+    {% if is_admin %}
+        <form action="/admin/" method="post">
+            <input type="submit" class="button" value="View Logs"/>
+        </form>
+    {% endif %}
 </body>
 </html>

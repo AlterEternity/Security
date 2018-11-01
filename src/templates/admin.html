@@ -4,10 +4,26 @@
 <head>
     <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Admin Page</title>
 </head>
 <body>
-
-
+    <h1>All Logs</h1>
+    <table>
+    {% for row in range(events_all) %}
+        <tr>
+            <td> {{ all_logs[row] }} </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <br>
+    <h1>Critical Logs</h1>
+    <table>
+    {% for row in range(events_crit) %}
+        <tr>
+            <td> {{ crit_logs[row] }} </td>
+        </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>
